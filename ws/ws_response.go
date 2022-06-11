@@ -27,10 +27,10 @@ func (o *OrderBookL2) Key() string {
 type Trade struct {
 	Symbol        string    `json:"symbol"`
 	TickDirection string    `json:"tick_direction"`
-	Price         string    `json:"price"`
+	Price         float64   `json:"price,string"`
 	Size          float64   `json:"size"`
 	Timestamp     time.Time `json:"timestamp"`
-	TradeTimeMs   string    `json:"trade_time_ms"`
+	TradeTimeMs   float64   `json:"trade_time_ms,string"`
 	Side          string    `json:"side"`
 	TradeID       string    `json:"trade_id"`
 }
